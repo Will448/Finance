@@ -1,15 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package br.com.finfac.telas;
 
 import java.awt.Color;
 
-/**
- *
- * @author João Sales
- */
 public class TelaSobre extends javax.swing.JFrame {
 
     /**
@@ -39,13 +32,13 @@ public class TelaSobre extends javax.swing.JFrame {
         setTitle("Sobre");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Sistema de Finanças Familiares");
+        jLabel1.setText("Sistema de Finanças - FINANCE");
 
-        jLabel2.setText("Projeto desenvolvido para a disciplina de APOO");
+        jLabel2.setText("Projeto desenvolvido para a disciplina de Programação 2");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/finfac/icones/money-bag.png"))); // NOI18N
 
-        jLabel5.setText("Feito por João Vitor Fernandes de Sales");
+        jLabel5.setText("Feito para programação 2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -6,18 +6,16 @@ package br.com.finfac.telas;
 
 import java.awt.Color;
 
-/**
- *
- * @author João Sales
- */
+
 import java.sql.*;
-import br.com.finfac.dao.ModuloConexao;
+import br.com.finfac.BD.ModuloConexao;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
 public class TelaUsuario extends javax.swing.JInternalFrame {
 
-    Connection conexao = null;
+    Connection conexao = ModuloConexao.conectar();
+
     PreparedStatement pst = null;
     ResultSet rs = null;
 

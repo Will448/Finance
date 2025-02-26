@@ -9,19 +9,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.*;
-import br.com.finfac.dao.ModuloConexao;
+import br.com.finfac.BD.ModuloConexao;
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
 
-/**
- *
- * @author João Sales
- */
+
 public class TelaGastos extends javax.swing.JInternalFrame {
 
-    Connection conexao = null;
+    Connection conexao = ModuloConexao.conectar();
     PreparedStatement pst = null;
     ResultSet rs = null;
 

@@ -1,23 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
 package br.com.finfac.telas;
 
 import java.sql.*;
-import br.com.finfac.dao.ModuloConexao;
+import br.com.finfac.BD.ModuloConexao;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
 
-/**
- *
- * @author João Sales
- */
+
+
 public class TelaEvento extends javax.swing.JInternalFrame {
 
-    Connection conexao = null;
+    Connection conexao = ModuloConexao.conectar();
+
     PreparedStatement pst = null;
     ResultSet rs = null;
 

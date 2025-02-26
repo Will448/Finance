@@ -5,7 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.*;
-import br.com.finfac.dao.ModuloConexao;
+import br.com.finfac.BD.ModuloConexao;
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -28,7 +28,7 @@ public class TelaReceita  extends javax.swing.JInternalFrame {
         }
 
     private void pesquisar_evento() {
-        String sql = "select id_evento as id_evento, descricao as Descrição from tbeventos where descricao like ?";
+        String sql = "select id_evento as 'Id', descricao as 'Descrição' from tbreceitasevento where descricao like ?";
         try {
             pst = conexao.prepareStatement(sql);
             pst.setString(1, "%" + txtEvento.getText() + "%");
@@ -224,7 +224,7 @@ public class TelaReceita  extends javax.swing.JInternalFrame {
 
             setIconifiable(true);
             setMaximizable(true);
-            setTitle("Gastos");
+            setTitle("Receitas");
             getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             jLabel3.setText("Situação");
@@ -424,9 +424,9 @@ public class TelaReceita  extends javax.swing.JInternalFrame {
             });
             getContentPane().add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, -1, -1));
 
-            btnDeletar.setForeground(new java.awt.Color(78, 92, 188));
+            btnDeletar.setForeground(new java.awt.Color(78, 92, 150));
             btnDeletar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/finfac/icones/trash.png"))); // NOI18N
-            btnDeletar.setEnabled(false);
+            btnDeletar.setEnabled(true);
             btnDeletar.setPreferredSize(new java.awt.Dimension(80, 80));
             btnDeletar.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -447,7 +447,7 @@ public class TelaReceita  extends javax.swing.JInternalFrame {
             jLabel8.setText("Observações");
             getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, -1, -1));
 
-            cboMeio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Dinheiro", "Cartão de crédito", "Cartão de débito", "Transferência bancária", "Boleto bancário", "Cheque", "Pix", "PayPal", "PicPay", "Mercado Pago", "Outro " }));
+            cboMeio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Dinheiro", "Transferência bancária", "Boleto bancário", "Cheque", "Pix", "Mercado Pago", "Outro " }));
             cboMeio.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     cboMeioActionPerformed(evt);
@@ -464,7 +464,7 @@ public class TelaReceita  extends javax.swing.JInternalFrame {
             jLabel10.setText("Valor");
             getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, -1, -1));
 
-            cboCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Alimentação", "Transporte", "Habitação", "Educação", "Saúde", "Lazer", "Vestuário", "Eletrônicos", "Utilidades domésticas", "Impostos e taxas", "Presentes", "Outros" }));
+            cboCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Salário", "Aluguel Recebido", "Juros de Investimentos", "Dividendos","Lucro de Negócios ","Presentes", "Outros" }));
             getContentPane().add(cboCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, -1, -1));
 
             jLabel11.setText("Descrição");

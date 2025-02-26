@@ -5,7 +5,7 @@
 package br.com.finfac.telas;
 
 import java.sql.*;
-import br.com.finfac.dao.ModuloConexao;
+import br.com.finfac.BD.ModuloConexao;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
@@ -87,7 +87,7 @@ public class TelaLogin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Finfac - Login");
+        setTitle("Finance - Login");
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(355, 165));
         setResizable(false);
